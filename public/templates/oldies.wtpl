@@ -63,13 +63,9 @@
 <div class="clear"></div>
 
 <div class="footer" id="FooterLTS">
-  <div class="left">
-    webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
-    fraiche-de-bxl.be | legal information
-  </div>
-  <div class="right">
-    SOMEONEELS.BE - © COPYRIGHT 2007-2011
-  </div>
+  webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
+  fraiche-de-bxl.be | legal information &mdash; 
+  SOMEONEELS.BE - © COPYRIGHT 2007-2011
 </div>
 
 </div>

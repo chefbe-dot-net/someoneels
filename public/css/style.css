@@ -77,30 +77,10 @@ div#main div.right div.bullets {
 }
 
 div#main div.footer {
-  clear: both;
   margin-top: 10px;
   font-size: 10px;
-  width: 990px; /** Bug in FF ? */
-}
-
-div#main div.footer div.left {
-  margin-left: 300px;
-  width: 370px;
-  height: 20px;
-  padding: 5px;
-  display: inline;
-}
-
-div#main div.footer div.right {
-  text-align: right;
-  width: 250px;
-  height: 20px;
-  display: inline;
-}
-
-div#main div.footer a.copyright {
-  font-size: 18px;
-  font-weight: bold;
+  text-align: center;
+  padding-left: 260px;
 }
 
 div#main div.sheet div.middle {
