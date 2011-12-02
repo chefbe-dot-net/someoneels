@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="${lang}">
+  <head>
+    <title>Someone Els</title>
+    <meta name="keywords" content="${info['keywords'].join(', ')}">
+    <meta name="description" content="${info['description']}">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/js/jquery-1.6.4.min.js"></script>
+    <script src="/js/bootstrap-twipsy.js"></script>
+    <script src="/js/websync-tools-0.0.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        websync.tools.external_links_to_blank();
+        websync.tools.image_tooltips();
+      });
+    </script>
+ </head>
+  <body>
+    <<+{oldies.wtpl share all}
+    ?{environment == :production}{<<{analytics.html}}
+  </body>
+</html>

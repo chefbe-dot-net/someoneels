@@ -1,0 +1,316 @@
+OBJECT {
+  position: relative;
+  z-index: 0;
+}
+
+html {
+  overflow: hidden;
+  background: black;
+}
+
+body {
+  background: black;
+  font-family: verdana, sans-serif;
+  font-size: 11px;
+  line-height: 22px;
+  word-spacing: 0.01em;
+  letter-spacing: 0.01em;
+  color: white;
+  overflow: hidden;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: white;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 0.7;
+  font-family: verdana, sans-serif;
+  line-height: 24px;
+}
+
+a img {
+  border: none;
+}
+
+div.clear {
+  clear: both;
+}
+
+div#main {
+  z-index: 0;
+  width: 990px;
+  height: 615px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 20px;
+    /*position: absolute;
+    top : 50%;
+    left : 50%;
+    margin-left: -495px;
+    margin-top: -305px;*/
+}
+
+div#main div.left {
+  float: left;
+  height: 580px;
+  width: 240px;
+  overflow: hidden;
+}
+
+div#main div.right {
+  float: right;
+  height: 580px;
+  width: 690px;
+}
+
+div#main div.right div.bullets {
+  text-align: center;
+}
+
+div#main div.footer {
+  clear: both;
+  margin-top: 10px;
+  font-size: 10px;
+  width: 990px; /** Bug in FF ? */
+}
+
+div#main div.footer div.left {
+  margin-left: 300px;
+  width: 370px;
+  height: 20px;
+  padding: 5px;
+  display: inline;
+}
+
+div#main div.footer div.right {
+  text-align: right;
+  width: 250px;
+  height: 20px;
+  display: inline;
+}
+
+div#main div.footer a.copyright {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div#main div.sheet div.middle {
+  background-color: #383e3f;
+}
+
+div#main div.sheet div.top {
+  background-image: url("images/bcol_top.gif");
+  height: 37px;
+}
+
+div#main div.sheet div.bottom {
+  background-image: url("images/bcol_down.gif");
+  height: 23px;
+}
+
+div#main div.sheet.big {
+  width: 690px;
+}
+
+div#main div.sheet.big div.middle {
+  height: 375px;
+  width: 650px;
+  overflow: hidden;
+  padding-left: 40px;
+}
+
+div#main div.sheet.little div.middle {
+  text-align: center;
+  height: 540px;
+  overflow: hidden;
+}
+
+div#main div.sheet.little div.bottom {
+  background-image: none;
+  height: 0px;
+}
+
+
+#lang-menu {
+  height: 22px;
+  margin-top: 85px;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-family: helvetica, sans-serif;
+}
+#lang-menu .current {
+  font-weight: bold;
+  color: #0AADF0;
+}
+
+#top-menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#top-menu span {
+  margin-left: 10px;
+  margin-right: 8px;
+  color: #585f62;
+  font-size: 15px;
+  font-family: helvetica, sans-serif;
+}
+#top-menu span a {
+  text-decoration: none;
+  color: #585f62;
+}
+#top-menu span a:hover {
+  color: #B2B2B2;
+}
+#top-menu span a.current {
+  color: #00adef;
+  font-weight: bold;
+}
+
+div.text {
+  width: 410px;
+  margin-top: 15px;
+}
+
+textarea.text.hear {
+  height: 50px;
+  width: 400px;
+}
+
+div.text a, div.textpanel a {
+  color: #1B7697;  
+}
+
+img.sticker {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+#toolsWindow {
+  color: black;
+}
+
+div.textpanel {
+  position: relative;
+  overflow: hidden;
+  height: 310px;
+  width: 630px;
+}
+
+div.textpanel .content {
+  position: relative;
+  bottom: 0;
+  float: left;
+  width: 485px;
+}
+
+div.textpanel .buttons {
+  float: right;
+}
+
+div.textpanel .buttons a.topbutton {
+  display: block;
+  margin-bottom: 235px;
+}
+
+div.textpanel .buttons a img {
+  border: none;
+}
+
+a.BackWhiteLink {
+  float: right;
+  margin-right: 25px;
+  font-family: Helvetica, sans-serif;
+}
+
+div.persdetails {
+  margin-top: 30px;
+}
+
+div.persdetails img.perspicture {
+  float: left;
+  width: 215px;
+  margin-left: 25px;
+}
+
+div.persdetails div.textpanel {
+  float: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 360px;
+  height: 295px;
+}
+
+div.persdetails div.textpanel .buttons {
+  margin-left: 50px;
+}
+
+div.persdetails div.textpanel .buttons a.topbutton {
+  margin-top: 50px;
+  display: block;
+  margin-bottom: 165px;
+}
+
+div.persdetails div.textpanel .content {
+  width: 280px;
+}
+
+div.mp3list {
+  margin-left: 15px;
+  margin-top: 5px;
+  line-height: 16px;
+}
+
+div.mp3list div.textpanel {
+  margin-top: 20px;
+  height: 215px;
+  width: 600px;
+}
+
+div.mp3list div.textpanel .content {
+  width: 590px;
+}
+
+div.mp3list div.textpanel .buttons a.topbutton {
+  margin-bottom: 150px;
+}
+
+div.mp3 {
+  margin-bottom: 18px;
+}
+
+div.mp3 div.title {
+  margin-bottom: 3px;
+}
+
+div.mp3 div.title a {
+  font-size: 11px;
+  color: #00adef;
+  margin-right: 25px;
+}
+
+div.text.hear {
+  height: 44px;
+  width: 450px;
+}
+
+#flashplayer 
+{
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
