@@ -6,9 +6,9 @@
     <div class="middle">
       <img src="images/logo.gif" alt="logo">
       <div id="lang-menu">
-        <a href="${page}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
-        <a href="${page}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
-        <a href="${page}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
+        <a href="${page[:id]}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
+        <a href="${page[:id]}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
+        <a href="${page[:id]}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
       </div>
       <img src="images/pic6.jpg" alt="a picture of the band" id="band_pict" 
            style="opacity: 0.4342178204538588; " width="240">
@@ -18,54 +18,33 @@
 </div> <!-- left -->
 
 <div class="right">
-  <div class="bullets" id="bullets">
-    <div id="fbullets" style="position: relative; z-index: 0;">
-      <embed type="application/x-shockwave-flash" src="images/bullets.swf" 
-             width="680" height="75" id="flash_bullets" name="flash_bullets" quality="high" 
-             allowscriptaccess="always" allowfullscreen="false" wmode="transparent" 
-             flashvars="width=680&amp;height=75&amp;javascriptid=flash_bullets&amp;enablejs=true&amp;backcolor=OxOOOOOO">
-    </div>
+  <div id="bullets">
+    <img src="${page[:bullets]}">
   </div>
 
   <div id="top-menu">
     *{structure as p}{
-      <span><a href="${p[:id]}?lang=${lang}" ?{page == p[:id]}{class="current"}>${p[:id].upcase}</a></span>
+      <span><a href="${p[:id]}?lang=${lang}" ?{page[:id] == p[:id]}{class="current"}>${p[:id].upcase}</a></span>
     }{|}
   </div>
 
-  <div id="SheetLTS" style=""><div class="sheet big">
+  <div class="sheet big">
     <div class="top">&nbsp;</div>
     <div class="middle">
-      <img class="sticker" src="images/follow.gif" alt="title">
-      <div class="text">
-        <div class="textpanel" id="textpanel">
-          <div class="content" id="textpanel_content">
-            +{text}
-          </div>
-          <div class="buttons">
-            <a ondblclick="tup();" onmousedown="tup(); thread = new PeriodicalExecuter(tup, 0.1)" style="display: none" onmouseup="thread.stop()" id="textpanel_upbtn" class="topbutton">
-              <img src="./index_files/uarrow.gif">
-            </a>
-            <a ondblclick="tdown()" style="display: none" onmousedown="tdown(); thread = new PeriodicalExecuter(tdown, 0.1)" onmouseup="thread.stop()" id="textpanel_downbtn" class="bottombutton">
-              <img src="./index_files/darrow.gif" alt="down">
-            </a>
-          </div>
-        </div>
-      </div>
+      <img class="sticker" src="${page[:sticker]}" alt="title">
+      <div class="text">+{text}</div>
     </div> <!-- middle -->
     <div class="bottom"></div>
-  </div> <!-- SheetLTS -->
+  </div> 
 
 </div> <!-- right -->
 
-</div> <!-- #main -->
-
 <div class="clear"></div>
 
-<div class="footer" id="FooterLTS">
-  webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
-  fraiche-de-bxl.be | legal information &mdash; 
-  SOMEONEELS.BE - © COPYRIGHT 2007-2011
+<div id="footer">
+  <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
+  fraiche-de-bxl.be</div>
+  <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2011</div>
 </div>
 
-</div>
+</div> <!-- #main -->

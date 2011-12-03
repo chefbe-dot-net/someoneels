@@ -35,14 +35,14 @@ class WebApp < Sinatra::Base
 
   get '/' do
     lang = params["lang"] || settings.default_lang
-    info   = info(lang)
-    wlang(:lang => lang, :info => info, :page => "home")
+    page = "home"
+    serve(lang, page)
   end
 
   get '/:page' do
     lang = params["lang"] || settings.default_lang
-    info   = info(lang)
-    wlang(:lang => lang, :info => info, :page => params[:page])
+    page = params[:page]
+    serve(lang, page)
   end
   
   ############################################################## Error handling
@@ -55,17 +55,24 @@ class WebApp < Sinatra::Base
   ############################################################## Helpers
   module Tools
 
+    # Structure as a relation
     def structure
       PAGES.glob('*').
         select{|f| f.directory?}.
         sort{|k1,k2| k1.basename.to_s <=> k2.basename.to_s}.
         map do |f| 
-          { :id   => /^\d+\-(.*)$/.match(f.basename.to_s)[1],
-            :path => f,
-            :yml  => f/"index.yml" }
+          /^(\d+)\-(.*)$/ =~ f.basename.to_s
+          id, pos = $2, $1
+          { :id      => id,
+            :pos     => pos,
+            :path    => f,
+            :yml     => f/"index.yml",
+            :bullets => "images/#{pos}-bullets.gif",
+            :sticker => "pages/#{f.basename.to_s}/sticker.gif" }
         end
     end
 
+    # Loads info for a given language
     def info(lang)
       mtimef = if settings.environment == :production
         ROOT/"tmp"/"restart.txt" 
@@ -77,15 +84,20 @@ class WebApp < Sinatra::Base
       )
     end
 
-    def wlang(ctx)
-      page = structure.find{|s| s[:id] == ctx[:page]}
-      return not_found unless page
-      yml  = YAML::load(page[:yml].read)
-      text = kramdown(yml[ctx[:lang]])
-      ctx = ctx.merge(:environment => settings.environment)
-      ctx = ctx.merge(:text => text)
-      tpl = PUBLIC/:templates/"html.whtml"
-      WLang::file_instantiate(tpl, ctx.merge(:structure => structure))
+    def serve(lang, pageid)
+      if page = structure.find{|s| s[:id] == pageid}
+        ctx = { 
+          :lang        => lang,
+          :page        => page,
+          :info        => info(lang),
+          :text        => kramdown(YAML::load(page[:yml].read)[lang]),
+          :environment => settings.environment, 
+          :structure   => structure}
+        tpl = PUBLIC/:templates/"html.whtml"
+        WLang::file_instantiate(tpl, ctx)
+      else
+        not_found
+      end
     end
 
     def kramdown(text)
