@@ -14,18 +14,15 @@ WLang::dialect('whtml', '.whtml') do
     [text, reached]
   end
 
-  rule '#' do |parser,offset|
-    yaml, reached = parser.parse(offset, "wlang/dummy")
-    YAML::load(yaml).each_pair do |k,v|
-      parser.scope_define(k,v)
-    end
-    ["", reached]
-  end
-
   rule '@' do |parser, offset|
-    link, reached = parser.parse(offset)
-    link = parser.evaluate(link)
-    [link, reached]
+    link, offset = parser.parse(offset)
+    if parser.has_block?(offset)
+      sublink, offset = parser.parse_block(offset)
+      link += "/" unless link[-1,1] == '/'
+      link += sublink
+    end
+    link = "#{link}?lang=#{parser.evaluate('lang')}"
+    [link, offset]
   end
 
 end

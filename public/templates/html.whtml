@@ -17,16 +17,16 @@
       var pics = !{pictures.to_json};
       var curpic = 0;
       var maxpic = !{pictures.size};
-      setTimeout(function() { nextPict(); }, 3000);
       $(document).ready(function(){
         websync.tools.external_links_to_blank();
+        setTimeout(function() { nextPict(); }, 3000);
       });
       function nextPict() {
-        curpic = curpic + 1;
-        if (curpic == maxpic) {curpic = 0; }
         $("#band_pict").fadeOut(1000, function() {
           $("#band_pict").attr("src", pics[curpic]["url"]);
           $("#band_pict").fadeIn();
+          curpic = curpic + 1;
+          if (curpic == maxpic) { curpic = 0; }
           setTimeout(function() { nextPict(); }, 3000);
         });
       };
@@ -56,7 +56,7 @@
         </div>
         <div id="top-menu">
           *{menu as p}{
-            <span><a href="${p.url}?lang=${lang}" ?{url == p.url}{class="current"}>${p.label}</a></span>
+            <span><a href="@{!{p.url}}" ?{url == p.url}{class="current"}>${p.label}</a></span>
           }{|}
         </div>
         <div class="sheet big">

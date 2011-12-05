@@ -43,6 +43,14 @@ class WebApp < Sinatra::Base
     serve(lang, "1-home/")
   end
 
+  get %r{^/(.+)/sticker.gif$} do
+    send_file PAGES/"#{params[:captures].first}/sticker.gif"
+  end
+
+  get %r{^/(.+)/photo.gif$} do
+    send_file PAGES/"#{params[:captures].first}/photo.gif"
+  end
+
   get %r{^/(.+)} do
     lang = params["lang"] || settings.default_lang
     page = params[:captures].first

@@ -1,5 +1,5 @@
 <div id="hear">
-  <img class="sticker" src="/pages/${url}/sticker.gif" alt="title">
+  <img class="sticker" src="@{!{url}}{sticker.gif}" alt="title">
   <div id="jquery_jplayer_1" class="jp-jplayer"></div> 
   <div class="jp-audio-container"> 
     <div class="jp-audio"> 
