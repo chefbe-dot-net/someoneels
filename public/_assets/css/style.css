@@ -166,5 +166,6 @@ img.sticker {
 #hear .sticker {
   float: left; }
 #hear .text {
-  height: 305px; }
+  height: 305px; 
+  clear: both; }
 
