@@ -27,10 +27,7 @@ class WebApp < Sinatra::Base
   get '/sitemap.xml' do
     content_type "application/xml"
     tpl = PUBLIC/:templates/"sitemap.whtml"
-    files = (PUBLIC/:pages).glob("**/*.md").reject{|f|
-      ["menu.md", "header.md"].include?(f.basename.to_s)
-    }.map{|f| f.extend(Path2URL)}
-    WLang::file_instantiate(tpl, :files => files)
+    WLang::file_instantiate(tpl)
   end
 
   get '/' do
@@ -74,14 +71,7 @@ class WebApp < Sinatra::Base
 
     # Loads info for a given language
     def info(lang)
-      mtimef = if settings.environment == :production
-        ROOT/"tmp"/"restart.txt" 
-      else 
-        ROOT/"Gemfile.lock"
-      end
-      YAML::load((PAGES/"info.yml").read)[lang].merge(
-        "lastupdate" => mtimef.mtime.strftime("%Y-%m-%d")
-      )
+      YAML::load((PAGES/"info.yml").read)[lang]
     end
 
     def serve(lang, pageid)
@@ -106,16 +96,6 @@ class WebApp < Sinatra::Base
 
   end
   include Tools
-  
-  module Path2URL
-    def to_url
-      if basename.to_s == "index.md"
-        (to_s =~ /pages\/(.*\/)index\.md$/) && $1
-      else
-        (to_s =~ /pages\/(.*)\.md$/) && $1
-      end
-    end
-  end
   
   ############################################################## Auto start
 
