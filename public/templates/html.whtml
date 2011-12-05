@@ -5,13 +5,13 @@
     <meta name="keywords" content="${keywords[lang].join(', ')}">
     <meta name="description" content="${description[lang]}">
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/jplayer/jplayer-black-and-yellow.css"/>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="/js/jquery-1.6.4.min.js"></script>
-    <script src="/js/bootstrap-twipsy.js"></script>
+    <script src="/js/jplayer.min.js"></script>
     <script src="/js/websync-tools-0.0.1.js"></script>
     <script>
       $(document).ready(function(){
