@@ -4,7 +4,6 @@ require 'epath'
 require 'dialect'
 require 'sinatra/base'
 require 'ext/hash'
-require 'json'
 class WebApp < Sinatra::Base
 
   # PUBLIC of the web application

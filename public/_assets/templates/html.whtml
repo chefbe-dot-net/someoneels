@@ -14,7 +14,7 @@
     <script src="/_assets/js/jplayer.min.js"></script>
     <script src="/_assets/js/websync-tools-0.0.1.js"></script>
     <script>
-      var pics = !{pictures.to_json};
+      var pics = [*{pictures as p}{ {url: '${p.url}'} }{,}];
       var curpic = 0;
       var maxpic = !{pictures.size};
       $(document).ready(function(){
@@ -23,10 +23,10 @@
       });
       function nextPict() {
         $("#band_pict").fadeOut(1000, function() {
-          $("#band_pict").attr("src", pics[curpic]["url"]);
-          $("#band_pict").fadeIn();
           curpic = curpic + 1;
           if (curpic == maxpic) { curpic = 0; }
+          $("#band_pict").attr("src", pics[curpic]["url"]);
+          $("#band_pict").fadeIn();
           setTimeout(function() { nextPict(); }, 3000);
         });
       };
