@@ -1,4 +1,4 @@
-bullets: images/4-bullets.gif
+bullets: /css/images/4-bullets.gif
 template: main
 text:
   nl: |-
