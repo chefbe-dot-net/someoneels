@@ -7,25 +7,35 @@ class LinksTest < WebAppTest
       elm.text =~ %r{http://www.someoneels.be(/.*)}
       $1
     end
+    @visited = {}
+  end
+
+  def internal?(link)
+    link && !(link =~ /^http:/)
   end
 
   def test_links
     @pages.each do |p|
-      puts "Visiting #{p}"
-      visit(p)
+      do_visit(p) do
+        all("img").each do |elm|
+          do_visit(elm["src"]) if internal?(elm["src"])
+        end
+      end
+      do_visit(p) do
+        all("a").each do |elm|
+          do_visit(elm["href"]) if internal?(elm["href"])
+        end
+      end
+    end
+  end
+
+  def do_visit(url)
+    @visited[url] ||= begin
+      visit(url)
       assert_equal 200, page.status_code
-
-      # img tags
-      all("img").select{|elm| elm["src"]}.to_a.each do |elm|
-        visit(elm["src"])
-        assert_equal 200, page.status_code, "<img #{elm['src']}> is reachable"
-      end
-
-      # a tags
-      all("a").select{|elm| elm["href"] && (elm["href"] != '#')}.to_a.each do |elm|
-        visit(elm["href"])
-        assert_equal 200, page.status_code, "<a #{elm['href']}> is reachable"
-      end
+      puts "Checked: #{url}"
+      yield if block_given?
+      true
     end
   end
 
