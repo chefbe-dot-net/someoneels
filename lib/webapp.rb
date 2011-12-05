@@ -3,6 +3,7 @@ require 'kramdown'
 require 'epath'
 require 'dialect'
 require 'sinatra/base'
+require 'ext/hash'
 class WebApp < Sinatra::Base
 
   # PUBLIC of the web application
@@ -32,16 +33,15 @@ class WebApp < Sinatra::Base
 
   get '/' do
     lang = params["lang"] || settings.default_lang
-    page = "home"
+    serve(lang, "1-home/")
+  end
+
+  get %r{^/(.+)} do
+    lang = params["lang"] || settings.default_lang
+    page = params[:captures].first
     serve(lang, page)
   end
 
-  get '/:page' do
-    lang = params["lang"] || settings.default_lang
-    page = params[:page]
-    serve(lang, page)
-  end
-  
   ############################################################## Error handling
 
   # error handling
@@ -52,37 +52,9 @@ class WebApp < Sinatra::Base
   ############################################################## Helpers
   module Tools
 
-    # Structure as a relation
-    def structure
-      PAGES.glob('*').
-        select{|f| f.directory?}.
-        sort{|k1,k2| k1.basename.to_s <=> k2.basename.to_s}.
-        map do |f| 
-          /^(\d+)\-(.*)$/ =~ f.basename.to_s
-          id, pos = $2, $1
-          { :id      => id,
-            :pos     => pos,
-            :path    => f,
-            :yml     => f/"index.yml",
-            :bullets => "images/#{pos}-bullets.gif",
-            :sticker => "pages/#{f.basename.to_s}/sticker.gif" }
-        end
-    end
-
-    # Loads info for a given language
-    def info(lang)
-      YAML::load((PAGES/"info.yml").read)[lang]
-    end
-
-    def serve(lang, pageid)
-      if page = structure.find{|s| s[:id] == pageid}
-        ctx = { 
-          :lang        => lang,
-          :page        => page,
-          :info        => info(lang),
-          :text        => kramdown(YAML::load(page[:yml].read)[lang]),
-          :environment => settings.environment, 
-          :structure   => structure}
+    def serve(lang, url)
+      if file = PAGES/url/"index.yml"
+        ctx = load_ctx(lang, file).merge(:url => "/#{url}")
         tpl = PUBLIC/:templates/"html.whtml"
         WLang::file_instantiate(tpl, ctx)
       else
@@ -90,8 +62,13 @@ class WebApp < Sinatra::Base
       end
     end
 
-    def kramdown(text)
-      Kramdown::Document.new(text).to_html
+    def load_ctx(lang, url)
+      ctx = {}
+      while url.exist?
+        ctx = YAML::load(url.read).merge(ctx)
+        url = url.dir.parent/"index.yml"
+      end
+      {:lang => lang, :environment => settings.environment}.merge(ctx)
     end
 
   end

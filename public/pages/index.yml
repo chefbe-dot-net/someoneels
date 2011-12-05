@@ -1,0 +1,25 @@
+menu:
+  - url: /1-home/
+    label: WELCOME HOME
+  - url: /2-know/
+    label: KNOW
+  - url: /3-follow/
+    label: FOLLOW
+  - url: /4-see/
+    label: SEE
+  - url: /5-hear/
+    label: HEAR
+  - url: /6-contact/
+    label: CONTACT
+description:
+  nl: Someoneels
+  fr: Someoneels
+  en: Someoneels
+keywords:
+  nl: 
+    - muziek
+  fr:
+    - musique
+  en:
+    - music
+

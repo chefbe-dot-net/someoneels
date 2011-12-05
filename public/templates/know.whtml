@@ -1,0 +1,9 @@
+*{musicians as m}{
+  <a href="${m.url}">
+    <img class="sticker" src="/pages/${m.url}/sticker.gif">
+  </a>
+}
+<div class="text">
+  +{text[lang]}
+</div>
+

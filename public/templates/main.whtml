@@ -1,0 +1,5 @@
+<img class="sticker" src="/pages/${url}/sticker.gif" alt="title">
+<div class="text">
+  +{text[lang]}
+</div>
+

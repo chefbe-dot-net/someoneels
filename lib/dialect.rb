@@ -7,6 +7,13 @@ WLang::dialect('whtml', '.whtml') do
   rules    WLang::RuleSet::Encoding
   rules    WLang::RuleSet::Buffering
 
+  rule '+' do |parser,offset|
+    text, reached = parser.parse(offset)
+    text = parser.evaluate(text)
+    text = Kramdown::Document.new(text).to_html
+    [text, reached]
+  end
+
   rule '#' do |parser,offset|
     yaml, reached = parser.parse(offset, "wlang/dummy")
     YAML::load(yaml).each_pair do |k,v|

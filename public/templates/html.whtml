@@ -2,8 +2,8 @@
 <html lang="${lang}">
   <head>
     <title>Someone Els</title>
-    <meta name="keywords" content="${info['keywords'].join(', ')}">
-    <meta name="description" content="${info['description']}">
+    <meta name="keywords" content="${keywords[lang].join(', ')}">
+    <meta name="description" content="${description[lang]}">
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
@@ -21,8 +21,39 @@
  </head>
   <body>
     <div id="main">
-      <<+{left.wtpl share all}
-      <<+{right.wtpl share all}
+      <div class="left">
+        <div class="sheet little">
+          <div class="top">&nbsp;</div>
+          <div class="middle">
+            <a href="/"><img src="/images/logo.gif" alt="logo"></a>
+            <div id="lang-menu">
+              <a href="${url}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
+              <a href="${url}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
+              <a href="${url}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
+            </div>
+            <img src="/images/pic6.jpg" alt="a picture of the band" id="band_pict" 
+                 style="opacity: 0.4342178204538588; " width="240">
+          </div>
+          <div class="bottom">&nbsp;</div>
+        </div> <!-- sheet -->
+      </div> <!-- left -->
+      <div class="right">
+        <div id="bullets">
+          <img src="/${bullets}">
+        </div>
+        <div id="top-menu">
+          *{menu as p}{
+            <span><a href="${p.url}?lang=${lang}" ?{url == p.url}{class="current"}>${p.label}</a></span>
+          }{|}
+        </div>
+        <div class="sheet big">
+          <div class="top">&nbsp;</div>
+          <div class="middle">
+            <<+{${template}.whtml share all}
+          </div> <!-- middle -->
+          <div class="bottom"></div>
+        </div> 
+      </div> <!-- right -->
       <div class="clear"></div>
       <div id="footer">
         <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
