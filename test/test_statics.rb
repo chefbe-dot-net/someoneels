@@ -1,5 +1,5 @@
 require 'webapp_test'
-class IndexTest < WebAppTest
+class StaticsTest < WebAppTest
 
   def test_root
     visit('/')

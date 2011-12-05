@@ -28,7 +28,7 @@ class WebApp < Sinatra::Base
 
   get '/sitemap.xml' do
     content_type "application/xml"
-    tpl = PUBLIC/:templates/"sitemap.whtml"
+    tpl = PUBLIC/"sitemap.whtml"
     ctx = {:files => PAGES.glob("**/index.yml").map{|f|
       def f.to_url
         parent.to_s[(PAGES.to_s.length+1)..-1]
@@ -71,7 +71,7 @@ class WebApp < Sinatra::Base
       file = PAGES/url/"index.yml"
       if file.exist?
         ctx = load_ctx(lang, file).merge(:url => "/#{url}")
-        tpl = PUBLIC/:templates/"html.whtml"
+        tpl = PUBLIC/"_assets/templates/html.whtml"
         WLang::file_instantiate(tpl, ctx)
       else
         not_found

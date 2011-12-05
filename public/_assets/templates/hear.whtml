@@ -44,7 +44,7 @@
           ready: function () {
             switchSong({ mp3: '{songs.first.url}', title: '{songs.first.title}' });
           },
-          swfPath: "/js",
+          swfPath: "/_assets/js",
           supplied: "mp3"
         });
       });

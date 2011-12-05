@@ -5,14 +5,14 @@
     <meta name="keywords" content="${keywords[lang].join(', ')}">
     <meta name="description" content="${description[lang]}">
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/jplayer/jplayer-black-and-yellow.css"/>
+    <link rel="stylesheet" href="/_assets/css/style.css" />
+    <link rel="stylesheet" href="/_assets/css/jplayer/jplayer-black-and-yellow.css"/>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="/js/jquery-1.6.4.min.js"></script>
-    <script src="/js/jplayer.min.js"></script>
-    <script src="/js/websync-tools-0.0.1.js"></script>
+    <script src="/_assets/js/jquery-1.6.4.min.js"></script>
+    <script src="/_assets/js/jplayer.min.js"></script>
+    <script src="/_assets/js/websync-tools-0.0.1.js"></script>
     <script>
       var pics = !{pictures.to_json};
       var curpic = 0;
@@ -38,7 +38,7 @@
         <div class="sheet little">
           <div class="top">&nbsp;</div>
           <div class="middle">
-            <a href="/"><img src="/css/images/logo.gif" alt="logo"></a>
+            <a href="/"><img src="/_assets/css/images/logo.gif" alt="logo"></a>
             <div id="lang-menu">
               <a href="${url}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
               <a href="${url}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
@@ -52,7 +52,7 @@
       </div> <!-- left -->
       <div class="right">
         <div id="bullets">
-          <img src="${bullets}">
+          <img src="/_assets/css/images/3-bullets.gif">
         </div>
         <div id="top-menu">
           *{menu as p}{
@@ -74,6 +74,6 @@
         <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2011</div>
       </div>
     </div> <!-- #main -->
-    ?{environment == :production}{<<{analytics.html}}
+    ?{environment == :production}{<<+{analytics.whtml}}
   </body>
 </html>
