@@ -10,7 +10,6 @@ class WebApp < Sinatra::Base
   # PUBLIC of the web application
   ROOT    = Path(__FILE__).dir.dir
   PUBLIC  = ROOT/:public
-  PAGES   = PUBLIC/:pages
 
   ############################################################## Configuration
   # Serve public pages from public
@@ -29,9 +28,9 @@ class WebApp < Sinatra::Base
   get '/sitemap.xml' do
     content_type "application/xml"
     tpl = PUBLIC/"sitemap.whtml"
-    ctx = {:files => PAGES.glob("**/index.yml").map{|f|
+    ctx = {:files => PUBLIC.glob("**/index.yml").map{|f|
       def f.to_url
-        parent.to_s[(PAGES.to_s.length+1)..-1]
+        parent.to_s[(PUBLIC.to_s.length+1)..-1]
       end
       f
     }}
@@ -40,15 +39,7 @@ class WebApp < Sinatra::Base
 
   get '/' do
     lang = params["lang"] || settings.default_lang
-    serve(lang, "1-home/")
-  end
-
-  get %r{^/(.+)/sticker.gif$} do
-    send_file PAGES/"#{params[:captures].first}/sticker.gif"
-  end
-
-  get %r{^/(.+)/photo.gif$} do
-    send_file PAGES/"#{params[:captures].first}/photo.gif"
+    serve(lang, "home/")
   end
 
   get %r{^/(.+)} do
@@ -68,7 +59,7 @@ class WebApp < Sinatra::Base
   module Tools
 
     def serve(lang, url)
-      file = PAGES/url/"index.yml"
+      file = PUBLIC/url/"index.yml"
       if file.exist?
         ctx = load_ctx(lang, file).merge(:url => "/#{url}")
         tpl = PUBLIC/"_assets/templates/html.whtml"

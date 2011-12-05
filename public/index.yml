@@ -10,17 +10,17 @@ keywords:
   en:
     - music
 menu:
-  - url: /1-home/
+  - url: /home/
     label: WELCOME HOME
-  - url: /2-know/
+  - url: /know/
     label: KNOW
-  - url: /3-follow/
+  - url: /follow/
     label: FOLLOW
-  - url: /4-see/
+  - url: /see/
     label: SEE
-  - url: /5-hear/
+  - url: /hear/
     label: HEAR
-  - url: /6-contact/
+  - url: /contact/
     label: CONTACT
 google:
   tracker: UA-3061364-3

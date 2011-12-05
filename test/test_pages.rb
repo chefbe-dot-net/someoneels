@@ -2,12 +2,12 @@ require 'webapp_test'
 class LangTest < WebAppTest
 
   def test_default_language
-    visit('/1-home')
+    visit('/home')
     assert_equal "nl", first("html")["lang"]
   end
 
   def test_english
-    visit('/1-home?lang=en')
+    visit('/home?lang=en')
     assert_equal "en", first("html")["lang"]
   end
 
