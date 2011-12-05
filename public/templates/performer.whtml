@@ -1,5 +1,5 @@
 <div id="performer">
-  <a class="back" href="${url.split('/')[0...-1].join('/')}/">BACK</a>
+  <a class="back" href="${url.split('/')[0...-1].join('/')}/?lang=${lang}">BACK</a>
   <img src="/pages/${url}/photo.gif">
   <div class="text">
     +{text[lang]}
