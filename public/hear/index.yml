@@ -7,35 +7,35 @@ text:
   fr: |-
     Les quelques chansons qui suivent vous donnent une idée de notre son. Gardez un oeil sur ce site web afin d'écouter les chansons les plus récentes.
 songs:
-  - url:        /songs/i-would-die-for-you.mp3
+  - url:        /_media/songs/i-would-die-for-you.mp3
     title:      I WOULD DIE FOR YOU (Prince - arr. Piet Haven)
     info:       Recorded on 22/02/2008 in Tielrode by Lorin Bellengier
     performers: Eva (vcl) - Piet & Els (bck vcls) - Guy Raiff (Sp.Gst gtr) - Pieter (drs) - Piet (bs) - Raph (pno)
-  - url:        /songs/another-day-in-paradise.mp3
+  - url:        /_media/songs/another-day-in-paradise.mp3
     title:      ANOTHER DAY IN PARADISE (Phil Collins)
     info:       Recorded on 02/03/2007 at raadzaal gemeentehuis Kampenhout by René van den Boomgaard
     performers: Piet (vcl) - Els & Eva (bck vcls) - Raph (pno)
-  - url:        /songs/my-funny-valentine.mp3
+  - url:        /_media/songs/my-funny-valentine.mp3
     title:      MY FUNNY VALENTINE (Richard Rodgers / Lorenz Hart)
     info:       Recorded on 02/03/2007 at raadzaal gemeentehuis Kampenhout by René van den Boomgaard
     performers: Eva (vcl) - Piet (bs) - Raph (pno)
-  - url:        /songs/like-someone-in-love.mp3
+  - url:        /_media/songs/like-someone-in-love.mp3
     title:      LIKE SOMEONE IN LOVE (Jimmy Van Heusen / Johnny Burke))
     info:       Recorded on 02/12/2005 at Café De Fotograaf (Haacht) by Dirk Alaerts (Videohouse)
     performers: Els (vcl) – Piet (bs) – Raph (pno) – Bob Van Vaerenbergh (Sp.Gst drs)
-  - url:        /songs/memories-of-tomorrow.mp3
+  - url:        /_media/songs/memories-of-tomorrow.mp3
     title:      MEMORIES OF TOMORROW (Keith Jarrett)
     info:       Recorded on 02/12/2005 at Café De Fotograaf (Haacht) by Dirk Alaerts (Videohouse)
     performers: Els (vcl) – Piet (bs) – Raph (pno) – Bob Van Vaerenbergh (Sp.Gst drs)
-  - url:        /songs/love-for-sale.mp3
+  - url:        /_media/songs/love-for-sale.mp3
     title:      LOVE FOR SALE (Cole Porter)
     info:       Recorded on 01/04/2001 at Audio Visueel Centrum (St.Kat.Waver) by Roel de Ruijter
     performers: Els (vcl) – Guy Hennaut (Sp.Gst trp) – Piet (bs) – Raph (pno) – Didier “Migou” Beyney (Sp.Gst drs)
-  - url:        /songs/cry-me-a-river.mp3
+  - url:        /_media/songs/cry-me-a-river.mp3
     title:      CRY ME A RIVER (Arthur Hamilton)
     info:       Recorded on 01/04/2001 at Audio Visueel Centrum (St.Kat.Waver) by Roel de Ruijter
     performers: Els (vcl) – Fabrice Alleman (Sp.Gst sx) – Piet (bs) – Raph (pno) – Didier “Migou” Beyney (Sp.Gst drs)
-  - url:        /songs/explain-the-night.mp3
+  - url:        /_media/songs/explain-the-night.mp3
     title:      EXPLAIN THE NIGHT (Noa)
     info:       Recorded on 01/04/2001 at Audio Visueel Centrum (St.Kat.Waver) by Roel de Ruijter
     performers: Els (vcl) – Piet (bs & bck vcl) – Raph (pno) – Didier “Migou” Beyney (Sp.Gst drs)

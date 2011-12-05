@@ -77,8 +77,8 @@ class WebApp < Sinatra::Base
       {
         :lang => lang, 
         :environment => settings.environment,
-        :pictures => (PUBLIC/"pictures").glob("*.jpg").map{|f|
-          {:url => "/pictures/#{f.basename.to_s}"}
+        :pictures => (PUBLIC/"_media/pictures").glob("*.jpg").map{|f|
+          {:url => "/_media/pictures/#{f.basename.to_s}"}
         }
       }.merge(ctx)
     end
