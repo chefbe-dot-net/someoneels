@@ -29,7 +29,13 @@ class WebApp < Sinatra::Base
   get '/sitemap.xml' do
     content_type "application/xml"
     tpl = PUBLIC/:templates/"sitemap.whtml"
-    WLang::file_instantiate(tpl)
+    ctx = {:files => PAGES.glob("**/index.yml").map{|f|
+      def f.to_url
+        parent.to_s[(PAGES.to_s.length+1)..-1]
+      end
+      f
+    }}
+    WLang::file_instantiate(tpl, ctx)
   end
 
   get '/' do
@@ -54,7 +60,8 @@ class WebApp < Sinatra::Base
   module Tools
 
     def serve(lang, url)
-      if file = PAGES/url/"index.yml"
+      file = PAGES/url/"index.yml"
+      if file.exist?
         ctx = load_ctx(lang, file).merge(:url => "/#{url}")
         tpl = PUBLIC/:templates/"html.whtml"
         WLang::file_instantiate(tpl, ctx)
