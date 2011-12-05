@@ -16,12 +16,20 @@
     <script>
       $(document).ready(function(){
         websync.tools.external_links_to_blank();
-        websync.tools.image_tooltips();
       });
     </script>
  </head>
   <body>
-    <<+{oldies.wtpl share all}
+    <div id="main">
+      <<+{left.wtpl share all}
+      <<+{right.wtpl share all}
+      <div class="clear"></div>
+      <div id="footer">
+        <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
+        fraiche-de-bxl.be</div>
+        <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2011</div>
+      </div>
+    </div> <!-- #main -->
     ?{environment == :production}{<<{analytics.html}}
   </body>
 </html>

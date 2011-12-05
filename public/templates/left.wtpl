@@ -1,0 +1,17 @@
+<div class="left">
+  <div class="sheet little">
+    <div class="top">&nbsp;</div>
+    <div class="middle">
+      <a href="/"><img src="images/logo.gif" alt="logo"></a>
+      <div id="lang-menu">
+        <a href="${page[:id]}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
+        <a href="${page[:id]}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
+        <a href="${page[:id]}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
+      </div>
+      <img src="images/pic6.jpg" alt="a picture of the band" id="band_pict" 
+           style="opacity: 0.4342178204538588; " width="240">
+    </div>
+    <div class="bottom">&nbsp;</div>
+  </div> <!-- sheet -->
+</div> <!-- left -->
+
