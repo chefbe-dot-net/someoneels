@@ -1,3 +1,14 @@
+description:
+  nl: Someoneels
+  fr: Someoneels
+  en: Someoneels
+keywords:
+  nl: 
+    - muziek
+  fr:
+    - musique
+  en:
+    - music
 menu:
   - url: /1-home/
     label: WELCOME HOME
@@ -11,15 +22,3 @@ menu:
     label: HEAR
   - url: /6-contact/
     label: CONTACT
-description:
-  nl: Someoneels
-  fr: Someoneels
-  en: Someoneels
-keywords:
-  nl: 
-    - muziek
-  fr:
-    - musique
-  en:
-    - music
-

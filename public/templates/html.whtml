@@ -14,9 +14,22 @@
     <script src="/js/jplayer.min.js"></script>
     <script src="/js/websync-tools-0.0.1.js"></script>
     <script>
+      var pics = !{pictures.to_json};
+      var curpic = 0;
+      var maxpic = !{pictures.size};
+      setTimeout(function() { nextPict(); }, 3000);
       $(document).ready(function(){
         websync.tools.external_links_to_blank();
       });
+      function nextPict() {
+        curpic = curpic + 1;
+        if (curpic == maxpic) {curpic = 0; }
+        $("#band_pict").fadeOut(1000, function() {
+          $("#band_pict").attr("src", pics[curpic]["url"]);
+          $("#band_pict").fadeIn();
+          setTimeout(function() { nextPict(); }, 3000);
+        });
+      };
     </script>
  </head>
   <body>
@@ -31,8 +44,8 @@
               <a href="${url}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
               <a href="${url}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
             </div>
-            <img src="/pictures/pic6.jpg" alt="a picture of the band" id="band_pict" 
-                 style="opacity: 0.4342178204538588; " width="240">
+            <img src="${pictures.first.url}" id="band_pict" 
+                 style="opacity: 0.5; " width="240">
           </div>
           <div class="bottom">&nbsp;</div>
         </div> <!-- sheet -->

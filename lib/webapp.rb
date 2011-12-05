@@ -4,6 +4,7 @@ require 'epath'
 require 'dialect'
 require 'sinatra/base'
 require 'ext/hash'
+require 'json'
 class WebApp < Sinatra::Base
 
   # PUBLIC of the web application
@@ -68,7 +69,13 @@ class WebApp < Sinatra::Base
         ctx = YAML::load(url.read).merge(ctx)
         url = url.dir.parent/"index.yml"
       end
-      {:lang => lang, :environment => settings.environment}.merge(ctx)
+      {
+        :lang => lang, 
+        :environment => settings.environment,
+        :pictures => (PUBLIC/"pictures").glob("*.jpg").map{|f|
+          {:url => "/pictures/#{f.basename.to_s}"}
+        }
+      }.merge(ctx)
     end
 
   end
