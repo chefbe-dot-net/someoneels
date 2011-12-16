@@ -7,6 +7,7 @@ Bundler.setup(:runtime)
 
 require 'ext/nocache'
 use Rack::Nocache
+use Rack::CommonLogger
 
 require 'webapp'
 map '/' do
