@@ -21,7 +21,7 @@ Dir.chdir(root = File.expand_path('../../',__FILE__)) do
     run lambda{|env|
       Bundler::with_original_env do 
         require 'someoneels/server_agent'
-        agent = Someoneels::ServerAgent.new(here)
+        agent = Someoneels::ServerAgent.new(root)
         agent.signal(:"redeploy-request")
         [ 200, 
          {"Content-type" => "text/plain"},
