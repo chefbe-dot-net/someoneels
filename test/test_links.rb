@@ -33,7 +33,6 @@ class LinksTest < WebAppTest
     @visited[url] ||= begin
       visit(url)
       assert_equal 200, page.status_code
-      puts "Checked: #{url}"
       yield if block_given?
       true
     end
