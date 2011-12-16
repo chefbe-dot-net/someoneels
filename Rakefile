@@ -2,7 +2,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 
 desc %q{Run the website locally}
 task :development do
-  exec "bundle exec ruby scripts/development.rb"
+  exec "ruby scripts/run.rb development"
 end
 
 desc %q{Run all client tests}

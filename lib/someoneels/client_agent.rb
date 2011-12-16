@@ -1,11 +1,11 @@
 module Someoneels
   class ClientAgent < WebSync::ClientAgent
 
-    ROOT = File.expand_path('../../', __FILE__)
+    ROOT = Path.backfind(".[.git]")
 
     def logger
       @logger ||= begin 
-        logger = Logger.new(File.join(ROOT, 'logs/client-agent.log'), 'monthly')
+        logger = Logger.new((ROOT/'logs/client-agent.log').to_s, 'monthly')
         logger.level = Logger::DEBUG
         logger
       end
