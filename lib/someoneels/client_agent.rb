@@ -45,7 +45,7 @@ module Someoneels
         end
 
         listen :working_dir_saved do |*args|
-          logger.info("Working dir saved (#{working_dir.fs_dir}).")
+          logger.info("Working dir saved (#{working_dir.path}).")
         end
 
         listen :"deploy-request" do |*args|
