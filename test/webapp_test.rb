@@ -1,4 +1,4 @@
-require 'webapp'
+require 'someoneels'
 require 'test/unit'
 require 'capybara'
 require 'capybara/dsl'
@@ -8,8 +8,8 @@ class WebAppTest < Test::Unit::TestCase
   attr_reader :theapp
 
   def setup
-    WebApp.set :environment, :test
-    Capybara.app = WebApp.new
+    Someoneels::WebApp.set :environment, :test
+    Capybara.app = Someoneels::WebApp.new
   end
 
 end
