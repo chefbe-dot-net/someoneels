@@ -19,13 +19,19 @@ Dir.chdir(root = File.expand_path('../../',__FILE__)) do
   # websync
   map '/websync/redeploy' do
     run lambda{|env|
-      Bundler::with_original_env do 
-        require 'someoneels/server_agent'
-        agent = Someoneels::ServerAgent.new(root)
-        agent.signal(:"redeploy-request")
-        [ 200, 
+      begin
+        Bundler::with_original_env do 
+          require 'someoneels/server_agent'
+          agent = Someoneels::ServerAgent.new(root)
+          agent.signal(:"redeploy-request")
+          [ 200, 
+           {"Content-type" => "text/plain"},
+           [ "Ok" ] ]
+        end
+      rescue Exception => ex
+        [ 500, 
          {"Content-type" => "text/plain"},
-         [ "Ok" ] ]
+         [ ex.message + "\n" + ex.backtrace.join("\n") ] ]
       end
     }
   end
