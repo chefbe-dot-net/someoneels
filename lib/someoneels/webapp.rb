@@ -73,10 +73,14 @@ module Someoneels
         {
           :lang => lang, 
           :environment => settings.environment,
-          :pictures => (PUBLIC/"_media/pictures").glob("*.jpg").map{|f|
-            {:url => "/_media/pictures/#{f.basename.to_s}"}
-          }
+          :pictures => pictures
         }.merge(ctx)
+      end
+      
+      def pictures
+        (PUBLIC/"_assets/pictures").glob("*.jpg").map{|f|
+          {:url => "/_assets/pictures/#{f.basename.to_s}"}
+        }
       end
 
     end
