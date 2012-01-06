@@ -5,6 +5,7 @@ module Someoneels
     # PUBLIC of the web application
     ROOT    = Path.backfind('.[.git]')
     PUBLIC  = ROOT/:public
+    HTML    = PUBLIC/"_assets/templates/html.whtml"
 
     ############################################################## Configuration
     # Serve public pages from public
@@ -18,7 +19,24 @@ module Someoneels
     # Domain specific configuration
     set :default_lang, "nl"
 
-    ############################################################## Routes
+    ########################################################### Rewriting routes
+
+    rewriting = YAML.load((PUBLIC/"rewriting.yml").read)
+
+    Array(rewriting["redirect"]).each do |h|
+      from, to, status = h.values_at("from", "to", "status")
+      get from do 
+        redirect to, status || 301
+      end
+    end
+
+    Array(rewriting["removed"]).each do |url|
+      get url do
+        410
+      end
+    end
+    
+    ############################################################## Google routes
 
     get '/sitemap.xml' do
       content_type "application/xml"
@@ -31,6 +49,12 @@ module Someoneels
       }}
       WLang::file_instantiate(tpl, ctx)
     end
+
+    get %r{/(google.*?.html)} do |url|
+      send_file PUBLIC/"_assets/google"/url
+    end
+
+    ############################################################## Routes
 
     get '/' do
       lang = params["lang"] || settings.default_lang
