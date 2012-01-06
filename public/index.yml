@@ -3,12 +3,9 @@ description:
   fr: Someoneels
   en: Someoneels
 keywords:
-  nl: 
-    - muziek
-  fr:
-    - musique
-  en:
-    - music
+  nl: [muziek]
+  fr: [musique]
+  en: [music]
 menu:
   - url: /home/
     label: WELCOME HOME

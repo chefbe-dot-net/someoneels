@@ -1,7 +1,7 @@
 <div id="performer">
   <a class="back" href="@{..}">BACK</a>
-  <img src="@{!{url}}{photo.gif}">
+  <img src="@{!{url}/photo.gif}">
   <div class="text">
-    +{text[lang]}
+    ~{text[lang]}
   </div>
 </div>

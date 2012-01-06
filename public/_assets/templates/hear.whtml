@@ -1,8 +1,8 @@
 <div id="hear">
-  <img class="sticker" src="@{!{url}}{sticker.gif}" alt="title">
+  <img class="sticker" src="@{!{url}/sticker.gif}" alt="title">
   <<{jplayer.html}
   <div class="text">
-    +{text[lang]}
+    ~{text[lang]}
     <ul id="mp3list">
       *{songs as s}{
       <li class="mp3"> 

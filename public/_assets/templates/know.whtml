@@ -1,9 +1,9 @@
 *{musicians as m}{
   <a href="@{!{m.url}}">
-    <img class="sticker" src="@{!{m.url}}{sticker.gif}">
+    <img class="sticker" src="@{!{m.url}/sticker.gif}">
   </a>
 }
 <div class="text">
-  +{text[lang]}
+  ~{text[lang]}
 </div>
 

@@ -1,5 +1,5 @@
-<img class="sticker" src="@{!{url}}{sticker.gif}" alt="title">
+<img class="sticker" src="!{url}/sticker.gif" alt="title">
 <div class="text">
-  +{text[lang]}
+  ~{text[lang]}
 </div>
 
