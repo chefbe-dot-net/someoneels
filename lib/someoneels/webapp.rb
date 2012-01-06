@@ -18,7 +18,16 @@ module Someoneels
 
     # Domain specific configuration
     set :default_lang, "nl"
-
+    set :default_context do
+      {:pictures => pictures}
+    end
+    
+    def self.pictures
+      (PUBLIC/"_assets/pictures").glob("*.jpg").map{|f|
+        {:url => "/_assets/pictures/#{f.basename.to_s}"}
+      }
+    end
+    
     ########################################################### Rewriting routes
 
     rewriting = YAML.load((PUBLIC/"rewriting.yml").read)
@@ -78,33 +87,45 @@ module Someoneels
     module Tools
 
       def serve(lang, url)
-        file = PUBLIC/url/"index.yml"
-        if file.exist?
-          ctx = load_ctx(lang, file).merge(:url => "/#{url}")
-          tpl = PUBLIC/"_assets/templates/html.whtml"
-          WLang::file_instantiate(tpl, ctx)
+        if (file = PUBLIC/url/"index.yml").exist?
+          WLang::file_instantiate HTML, load_ctx(lang, file)
         else
           not_found
         end
       end
 
-      def load_ctx(lang, url)
-        ctx = {}
-        while url.exist?
-          ctx = YAML::load(url.read).merge(ctx)
+      def load_ctx(lang, url, ctx = settings.default_context)
+        until (url == PUBLIC.parent/"index.yml")
+          if url.exist?
+            ctx = ctx_merge(YAML::load(url.read), ctx)
+            Array(ctx['includes']).each do |inc|
+              path = url.parent/inc
+              ctx = ctx_merge(YAML::load(path.read), ctx)
+            end
+          end
           url = url.dir.parent/"index.yml"
         end
-        {
+        ctx_merge({
           :lang => lang, 
           :environment => settings.environment,
-          :pictures => pictures
-        }.merge(ctx)
+          :url => "/#{url}"
+        },ctx)
       end
       
-      def pictures
-        (PUBLIC/"_assets/pictures").glob("*.jpg").map{|f|
-          {:url => "/_assets/pictures/#{f.basename.to_s}"}
-        }
+      def ctx_merge(left, right)
+        unless left.class == right.class        
+          raise "Unexpected #{left.class} vs. #{right.class}"
+        end
+        case left
+        when Array
+          (right | left).uniq
+        when Hash
+          left.merge(right){|k,l,r|
+            ctx_merge(l,r)
+          }
+        else
+          right
+        end
       end
 
     end
