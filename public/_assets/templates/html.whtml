@@ -74,6 +74,6 @@
         <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2011</div>
       </div>
     </div> <!-- #main -->
-    ?{environment == :production}{<<+{analytics.whtml share all}}
+    ?{environment == :production}{<<+{bricks/analytics.whtml share all}}
   </body>
 </html>

@@ -1,171 +1,43 @@
-OBJECT {
-  position: relative;
-  z-index: 0; }
-html {
-  overflow: hidden;
-  background: black; }
-body {
-  background: black;
-  font-family: verdana, sans-serif;
-  font-size: 11px;
-  line-height: 22px;
-  word-spacing: 0.01em;
-  letter-spacing: 0.01em;
-  color: white;
-  overflow: hidden; 
-  margin-top: 15px; }
-p {
-  margin-top: 0px;
-  margin-bottom: 15px; }
-a {
-  outline: none;
-  text-decoration: none;
-  color: white; }
-a img {
-  border: none; }
-h3 {
-  font-size: 15px;
-  font-weight: 0.7;
-  font-family: verdana, sans-serif;
-  line-height: 24px; } 
-div.clear {
-  clear: both; }
-
-div#main {
-  z-index: 0;
-  width: 990px;
-  height: 615px;
-  overflow: hidden;
-  margin: auto;
-  margin-top: 20px; }
-div#main div.left {
-  float: left;
-  height: 580px;
-  width: 240px;
-  overflow: hidden; }
-div#main div.right {
-  float: right;
-  height: 580px;
-  width: 690px; }
-div#main div.right div.bullets {
-  text-align: center; }
-
-#footer {
-  margin-top: 10px;
-  font-size: 10px;
-  padding-left: 310px; }
-#footer .webdesign {
-  float: left; }
-#footer .copyright {
-  float: right; }
-
-div#main div.sheet div.middle {
-  background-color: #383e3f; }
-div#main div.sheet div.top {
-  background-image: url("images/bcol_top.gif");
-  height: 37px; }
-div#main div.sheet div.bottom {
-  background-image: url("images/bcol_down.gif");
-  height: 23px; }
-div#main div.sheet.big {
-  width: 690px; }
-div#main div.sheet.big div.middle {
-  height: 375px;
-  width: 650px;
-  padding-left: 40px; }
-div#main div.sheet.little div.middle {
-  text-align: center;
-  height: 540px;
-  overflow: hidden; }
-div#main div.sheet.little div.bottom {
-  background-image: none;
-  height: 0px; }
-
-#lang-menu {
-  height: 22px;
-  margin-top: 85px;
-  text-align: right;
-  margin-right: 20px;
-  margin-bottom: 12px;
-  font-size: 13px;
-  font-family: helvetica, sans-serif; }
-#lang-menu a {
-  padding: 0px 5px; }
-#lang-menu .current {
-  font-weight: bold;
-  color: #0AADF0; }
-
-#top-menu {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 15px;
-  font-family: helvetica, sans-serif; 
-  color: #585f62; }
-#top-menu span {
-  margin-left: 10px;
-  margin-right: 8px; }
-#top-menu span a {
-  text-decoration: none;
-  color: #585f62; 
-  padding: 0px 10px; }
-#top-menu span a:hover {
-  color: #B2B2B2; }
-#top-menu span a.current {
-  color: #00adef;
-  font-weight: bold; }
-
-div.text {
-  width: 560px;
-  padding-right: 50px;
-  height: 305px;
-  overflow: auto; 
-  margin-top: 15px; }
-div.text a {
-  color: #1B7697; }
-
-img.sticker {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 25px;
-  margin-left: 10px; }
-
-#performer {
-  padding-top: 20px; }
-#performer img {
-  float: left; 
-  width: 215px; 
-  margin-left: 20px; }
-#performer .text {
-  float: left;
-  margin-top: 0px;
-  margin-left: 30px;
-  width: 320px;
-  height: 315px; }
-#performer .back {
-  float: right; 
-  padding-right: 30px; }
-
-#mp3list {
-  color: white;
-  margin-left: 15px;
-  margin-top: 5px;
-  line-height: 16px; }
-.mp3 {
-  color: white;
-  margin-bottom: 18px; }
-.mp3 a {
-  font-weight: bold;
-  font-size: 11px;
-  display: block;
-  margin-right: 25px; }
-.jp-audio-container {
-  float: right; 
-  margin-top: 10px;
-  margin-right: 40px; }
-#hear .sticker {
-  float: left; }
-#hear .text {
-  height: 305px; 
-  clear: both; }
-
+OBJECT{position:relative;z-index:0;}
+html{overflow:hidden;background:black;}
+body{background:black;font-family:verdana,sans-serif;font-size:11px;line-height:22px;word-spacing:0.01em;letter-spacing:0.01em;color:white;overflow:hidden;margin-top:15px;}
+p{margin-top:0px;margin-bottom:15px;}
+a{outline:none;text-decoration:none;color:white;}
+a img{border:none;}
+h3{font-size:15px;font-weight:0.7;font-family:verdana,sans-serif;line-height:24px;}
+div.clear{clear:both;}
+div#main{z-index:0;width:990px;height:615px;overflow:hidden;margin:auto;margin-top:20px;}
+div#main div.left{float:left;height:580px;width:240px;overflow:hidden;}
+div#main div.right{float:right;height:580px;width:690px;}
+div#main div.right div.bullets{text-align:center;}
+#footer{margin-top:10px;font-size:10px;padding-left:310px;}
+#footer .webdesign{float:left;}
+#footer .copyright{float:right;}
+div#main div.sheet div.middle{background-color:#383e3f;}
+div#main div.sheet div.top{background-image:url("images/bcol_top.gif");height:37px;}
+div#main div.sheet div.bottom{background-image:url("images/bcol_down.gif");height:23px;}
+div#main div.sheet.big{width:690px;}
+div#main div.sheet.big div.middle{height:375px;width:650px;padding-left:40px;}
+div#main div.sheet.little div.middle{text-align:center;height:540px;overflow:hidden;}
+div#main div.sheet.little div.bottom{background-image:none;height:0px;}
+#lang-menu{height:22px;margin-top:85px;text-align:right;margin-right:20px;margin-bottom:12px;font-size:13px;font-family:helvetica,sans-serif;}
+#lang-menu a{padding:0px 5px;}
+#lang-menu .current{font-weight:bold;color:#0AADF0;}
+#top-menu{margin-top:20px;margin-bottom:20px;text-align:center;font-size:15px;font-family:helvetica,sans-serif;color:#585f62;}
+#top-menu span{margin-left:10px;margin-right:8px;}
+#top-menu span a{text-decoration:none;color:#585f62;padding:0px 10px;}
+#top-menu span a:hover{color:#B2B2B2;}
+#top-menu span a.current{color:#00adef;font-weight:bold;}
+div.text{width:560px;padding-right:50px;height:305px;overflow:auto;margin-top:15px;}
+div.text a{color:#1B7697;}
+img.sticker{margin-top:10px;margin-bottom:10px;margin-right:25px;margin-left:10px;}
+#performer{padding-top:20px;}
+#performer img{float:left;width:215px;margin-left:20px;}
+#performer .text{float:left;margin-top:0px;margin-left:30px;width:320px;height:315px;}
+#performer .back{float:right;padding-right:30px;}
+#mp3list{color:white;margin-left:15px;margin-top:5px;line-height:16px;}
+.mp3{color:white;margin-bottom:18px;}
+.mp3 a{font-weight:bold;font-size:11px;display:block;margin-right:25px;}
+.jp-audio-container{float:right;margin-top:10px;margin-right:40px;}
+#hear .sticker{float:left;}
+#hear .text{height:305px;clear:both;}
