@@ -88,7 +88,8 @@ module Someoneels
 
       def serve(lang, url)
         if (file = PUBLIC/url/"index.yml").exist?
-          WLang::file_instantiate HTML, load_ctx(lang, file)
+          ctx = load_ctx(lang, file).merge(:url => "/#{url}")
+          WLang::file_instantiate HTML, ctx
         else
           not_found
         end
@@ -108,7 +109,6 @@ module Someoneels
         ctx_merge({
           :lang => lang, 
           :environment => settings.environment,
-          :url => "/#{url}"
         },ctx)
       end
       
