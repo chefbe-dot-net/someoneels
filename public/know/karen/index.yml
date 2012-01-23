@@ -1,7 +1,7 @@
 template: performer
 text:
   nl: |-
-    Karen (1986°)
+    # Karen (1986°)
     
     Karen Van Humbeeck begon haar muzikale carrière aan de Muziekacademie van Oud-Heverlee 
     toen ze 11 was. Ze leerde er naast de algemene kneepjes van het vak ook hoe ze een 
@@ -25,7 +25,7 @@ text:
     zangeres bij de funkgroep BARBAPAPAS.
 
   fr: |-
-    Karen (1986°)
+    # Karen (1986°)
     
     Karen Van Humbeeck commença sa carrière musicale à l’académie de musique d’Oud-Heverlee 
     à 11 ans. Elle y apprit le solfège, le piano et la contrebasse. La musique devint une 
@@ -46,7 +46,7 @@ text:
     BARBAPAPAS.
 
   en: |-
-    Karen (1986°)
+    # Karen (1986°)
     
     Karen Van Humbeeck started her musical career at the music academy in Oud-Heverlee 
     when she was 11 years old. That’s where she learned the music theory and how to 

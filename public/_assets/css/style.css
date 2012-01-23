@@ -31,6 +31,8 @@ div#main div.sheet.little div.bottom{background-image:none;height:0px;}
 div.text{width:560px;padding-right:50px;height:305px;overflow:auto;margin-top:15px;}
 div.text a{color:#1B7697;}
 img.sticker{margin-top:10px;margin-bottom:10px;margin-right:25px;margin-left:10px;}
+#know nav a{font-family:helvetica,sans-serif;color:white;padding:10px 40px;padding-left:0px;font-size:18px;font-variant:small-caps;}
+#know nav a:hover{color:#0aadf0;}
 #performer{padding-top:20px;}
 #performer img{float:left;width:215px;margin-left:20px;}
 #performer .text{float:left;margin-top:0px;margin-left:30px;width:320px;height:315px;}

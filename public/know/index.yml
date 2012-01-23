@@ -1,10 +1,15 @@
 template: know
 musicians:
-  - url: /know/eva/
-  - url: /know/karen/
-  - url: /know/piet/
-  - url: /know/pieter/
-  - url: /know/raph/
+  - name: Eva
+    url: /know/eva/
+  - name: Karen
+    url: /know/karen/
+  - name: Piet
+    url: /know/piet/
+  - name: Pieter
+    url: /know/pieter/
+  - name: Raph
+    url: /know/raph/
 text:
   nl: |-
     De groep ontstond oorspronkelijk als duo, Els Artois aan de zang en Raphaël 

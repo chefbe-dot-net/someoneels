@@ -1,9 +1,8 @@
-*{musicians as m}{
-  <a href="@{!{m.url}}">
-    <img class="sticker" src="@{!{m.url}/sticker.gif}">
-  </a>
-}
-<div class="text">
-  ~{text[lang]}
+<div id="know">
+  <nav>
+    *{musicians as m}{<a href="@{!{m.url}}">${m.name}</a>}
+  </nav>
+  <div class="text">
+    ~{text[lang]}
+  </div>
 </div>
-
