@@ -1,36 +1,46 @@
 template: main
 text:
   nl: |-
-    # Le SOMEONE ELS nouveau est arrivé !
-    Op zondag 22 januari 2012 gaf de nieuwe SOMEONE ELS, "The All Boys Band", een avant-première in café-restaurant De Comeet in Lier.
-    
+    ## Le SOMEONE ELS nouveau est arrivé !
+    Op zondag 22 januari 2012 gaf de nieuwe SOMEONE ELS, "The All Boys Band", een avant-première concert in café-restaurant De Comeet in Lier.
+    De boys genoten van de vrouwelijke aandacht in hun nieuwe rol als mannelijke idolen.
+    Het nieuwe repertoire is nu gerodeerd en de groep is er helemaal klaar voor.
+    Book SOMEONE ELS nu het nog kan! <br>@{/contact/}{Neem vrijblijvend contact op.}
+
+    ## Nieuwe CD
+    SOMEONE ELS bracht ook een nieuwe CD uit met oud en nieuw materiaal.<br>
+    @{/contact/}{Bestel uw CD via e-mail of telefoon.}
+
     Ondertussen werkt SOMEONE ELS verder aan verschillende projecten. We blijven 
     uw privéfeesten opluisteren. We houden u op de hoogte van zodra we een 
     “publiek” concert geven.
 
   en: |-
-    We are proud to introduce Karen Van Humbeeck. She is our new singer (and 
-    she’s also a pianist ... and a composer ...) with a wild creative temperament. 
-    "She may look like a saint, but she’s breaking every rule."
-    
-    Karen took over Els Artois’ role at the end of last summer (2008). This is 
-    not a definitive farewell. We hope to welcome Els as a « more than special » 
-    guest on lots of future gigs.
-    
+    ## Le SOMEONE ELS nouveau est arrivé !
+    On Sunday the 22nd of January 2012, the new SOMEONE ELS, "The All Boys Band", played in preview at the café-restaurant De Comeet in Lier.
+    The boys enjoyed all the female attention in their new role as male idols. 
+    The new repertoire is now played in and the band is fully ready to hit the road. 
+    Book SOMEONE ELS while it's still possible! <br>@{/contact/}{Contact us for info.}
+
+    ## New CD
+    SOMEONE ELS released also a new CD with old and new material.<br>
+    @{/contact/}{Order your CD by e-mail or by phone.}
+
     Meanwhile, SOMEONE ELS continues to work on different projects. We keep on 
     playing on your private parties. We will keep you informed whenever a « 
     public » concert is pending.
 
   fr: |-
-    C’est avec fierté que nous vous présentons Karen Van Humbeeck. Elle est 
-    notre nouvelle chanteuse (mais elle est aussi pianiste ... et compositrice 
-    ...) au tempérament sauvage et créateur. “She may look like a saint, but 
-    she’s breaking every rule.”
-    
-    Karen a repris le rôle d’Els Artois à la fin de l’été passé (2008). Nous ne 
-    disons pas adieu à Els, nous espérons la recevoir encore souvent comme « 
-    more than special » guest à nos concerts futurs.
-    
+    ## Le SOMEONE ELS nouveau est arrivé !
+    Le nouveau SOMEONE ELS, le "All Boys Band", à donné son tout premier concert en avant-première le dimanche 22 janvier au café-restaurant De Comeet à Lier.
+    Les boys ont beaucoup apprécié l'attention toute féminine dans leur nouveau rôle d'idoles masculines.
+    Le répertoire est maintenant rodé et le groupe est tout prêt à prendre la route. 
+    Bookez SOMEONE ELS tant que c'est encore possible ! <br>@{/contact/}{Contactez-nous pour infos.}
+
+    ## Nouveau CD
+    SOMEONE ELS à également publié un nouveau CD avec une compilation d'enregistrements récents et anciens. <br>
+    @{/contact/}{Commandez votre CD par e-mail ou par téléphone.}
+
     Entretemps SOMEONE ELS travaille sur plusieurs projets. Nous continuons à 
     animer vos fêtes privées. Nous vous tiendrons au courant dés qu’un concert 
     « public » se présentera.
