@@ -1,26 +1,47 @@
 template: main
 text:
   nl: |-
-    Raphael Van Goubergen
-    
-    +32 486 11 95 66
-    
-    info at someoneels.be
+    # Someone's Coaches
+
+    <b>Raphael Van Goubergen</b> 	
+    +32 486 11 95 66 <br>
+    <b>Andries Baele</b>
+    +32 494 13 38 20 <br>
+    <b>Pieter Dedoncker</b>
+    +32 499 14 08 73 <br>
+    <b>Piet Haven</b>
+    +32 473 28 89 63
+
+    info@someoneels.be
     
     Vraag gerust onze technische fiche op voor meer informatie.
   en: |-
-    Raphael Van Goubergen
-    
-    +32 486 11 95 66
-    
-    info at someoneels.be
+    # Someone's Coaches
+
+    <b>Raphael Van Goubergen</b> 	
+    +32 486 11 95 66 <br>
+    <b>Andries Baele</b>
+    +32 494 13 38 20 <br>
+    <b>Pieter Dedoncker</b>
+    +32 499 14 08 73 <br>
+    <b>Piet Haven</b>
+    +32 473 28 89 63
+
+    info@someoneels.be
     
     Need more information? Ask for our tecnical specifications.
   fr: |-
-    Raphael Van Goubergen
-    
-    +32 486 11 95 66
-    
-    info at someoneels.be
+    # Someone's Coaches
+
+    <b>Raphael Van Goubergen</b> 	
+    +32 486 11 95 66 <br>
+    <b>Andries Baele</b>
+    +32 494 13 38 20 <br>
+    <b>Pieter Dedoncker</b>
+    +32 499 14 08 73 <br>
+    <b>Piet Haven</b>
+    +32 473 28 89 63
+
+    info@someoneels.be
     
     Demandez notre fiche technique si vous voulez de plus amples informations.
