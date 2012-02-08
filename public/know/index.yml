@@ -1,9 +1,7 @@
 template: know
 musicians:
-  - name: Eva
-    url: /know/eva/
-  - name: Karen
-    url: /know/karen/
+  - name: Andries
+    url: /know/andries/
   - name: Piet
     url: /know/piet/
   - name: Pieter
