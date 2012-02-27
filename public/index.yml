@@ -3,9 +3,9 @@ description:
   fr: Someoneels
   en: Someoneels
 keywords:
-  nl: [muziek]
-  fr: [musique]
-  en: [music]
+  nl: [muziek, groep, band, vocal, zanger, instrumentaal, jazz, pop, andries baele, pieter dedoncker, piet haven, raph van goubergen]
+  fr: [musique, groupe, band, vocal, chanteur, instrumental, jazz, pop, andries baele, pieter dedoncker, piet haven, raph van goubergen]
+  en: [music, band, jazz, pop, vocal, singer, instrumental, andries baele, pieter dedoncker, piet haven, raph van goubergen]
 menu:
   - url: /home/
     label: WELCOME HOME
