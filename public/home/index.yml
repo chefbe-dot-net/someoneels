@@ -1,6 +1,8 @@
 template: main
 text:
   fr: |-
+    <b>SOMEONE ELS in Concert on December 8th 2012 ! @{/follow/}{Clic here !}</b>
+    
     SOMEONE ELS est un projet qui privilégie, selon la tradition jazz, l’expression 
     et l’improvisation des musiciens. Nos interprétations personnalisées de 
     compositions jazz et pop constituent un répertoire de concert qui sonne toujours 
@@ -16,6 +18,8 @@ text:
     ou simplement chez vous, sur le tapis plain.
 
   nl: |-
+    <b>SOMEONE ELS in Concert on December 8th 2012 ! @{/follow/}{Clic here !}</b>
+    
     SOMEONE ELS is een project dat, naar goede jazztraditie, de expressie/improvisatie 
     van de uitvoerende muzikant voorop stelt. Onze eigen interpretatie van jazz- en 
     popcomposities zorgt voor een concerterend en steeds fris in de oren klinkend 
@@ -31,6 +35,8 @@ text:
     bedrijfsfeest of gewoon bij u thuis op de tapis plain.
 
   en: |-
+    <b>SOMEONE ELS in Concert on December 8th 2012 ! @{/follow/}{Clic here !}</b>
+    
     SOMEONE ELS is a project in which, as the jazz tradition wants, the expression 
     and improvisation of the performing musicians stand central. Our own interpretations 
     of jazz and pop standards guarantee a concert repertoire that always sounds 
