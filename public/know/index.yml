@@ -1,18 +1,18 @@
 template: know
 musicians:
-  - name: Andries
-    url: /know/andries/
   - name: Piet
     url: /know/piet/
-  - name: Pieter
-    url: /know/pieter/
   - name: Raph
     url: /know/raph/
+  - name: Pieter
+    url: /know/pieter/
+  - name: Andries
+    url: /know/andries/
 text:
   nl: |-
     #Someone Els Today
-    De kern van de groep bestaat uit <b>Els Artois</b> (zang), <b>Piet Haven</b> (zang en basgitaar) en <b>Raph Van Goubergen</b> (piano en zang). 
-    Bij gelegenheid kunnen we ook rekenen op bijkomende muzikanten: Pieter Dedoncker (drums), Andries Baele (viool en zang), Michel Kuijken (gitaar), Eva Tulkens (zang) en Mariske Broeckmeyer (zang).
+    De kern van de groep bestaat uit <b>Piet Haven</b> (zang en basgitaar), <b>Raph Van Goubergen</b> (piano en zang), <b>Pieter Dedoncker</b> (drums) en <b>Andries Baele</b> (viool en zang). 
+    Bij gelegenheid kunnen we ook rekenen op bijkomende muzikanten: Els Artois (zang), Michel Kuijken (gitaar), Eva Tulkens (zang) en Mariske Broeckmeyer (zang).
     Wij combineren graag vocale en instrumentale jazz en pop op eigenzinnige wijze. 
 
     Het repertoire is een mengeling van 
@@ -53,8 +53,8 @@ text:
 
   en: |-
     #Someone Els Today
-    The core of the band are <b>Els Artois</b> (vocals), <b>Piet Haven</b> (vocals and bass guitar) and <b>Raph Van Goubergen</b> (piano and vocals). 
-    On occasion we can count on additional musicians: Pieter Dedoncker (drums), Andries Baele (violin and vocals), Michel Kuijken (guitar), Eva Tulkens (vocals) and Mariske Broeckmeyer (vocals). 
+    The core of the band are <b>Piet Haven</b> (vocals and bass guitar), <b>Raph Van Goubergen</b> (piano and vocals), <b>Pieter Dedoncker</b> (drums) and <b>Andries Baele</b> (violin and vocals). 
+    On occasion we can count on additional musicians: Els Artois (vocals), Michel Kuijken (guitar), Eva Tulkens (vocals) and Mariske Broeckmeyer (vocals). 
     We like to combine vocal and instrumental jazz and pop on our very own personal way.
 
     The repertoire is a mix of 
@@ -95,8 +95,8 @@ text:
 
   fr: |-
     #Someone Els Today
-    Le noyau central du groupe est formé par <b>Els Artois</b> (chant), <b>Piet Haven</b> (chant et guitare basse) et <b>Raph Van Goubergen</b> (piano et chant). 
-    A l'occasion, nous pouvons compter aussi sur des musiciens supplémentaires: Pieter Dedoncker (batterie), Andries Baele (violon et chant), Michel Kuijken (guitare), Eva Tulkens (chant) et Mariske Broeckmeyer (chant).
+    Le noyau central du groupe est formé par <b>Piet Haven</b> (chant et guitare basse), <b>Raph Van Goubergen</b> (piano et chant), <b>Pieter Dedoncker</b> (batterie) et <b>Andries Baele</b> (violon et chant). 
+    A l'occasion, nous pouvons compter aussi sur des musiciens supplémentaires: Els Artois (chant), Michel Kuijken (guitare), Eva Tulkens (chant) et Mariske Broeckmeyer (chant).
     Nous aimons combiner du jazz et de la pop vocal et instrumental d'une façon toute personnelle. 
 
     Le répertoire est un mélange 
