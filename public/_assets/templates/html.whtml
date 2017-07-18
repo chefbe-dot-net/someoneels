@@ -71,7 +71,7 @@
       <div id="footer">
         <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
         fraiche-de-bxl.be</div>
-        <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2011</div>
+        <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2017</div>
       </div>
     </div> <!-- #main -->
     ?{environment == :production}{<<+{bricks/analytics.whtml share all}}
