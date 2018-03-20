@@ -3,7 +3,7 @@ module Someoneels
   class WebApp < Sinatra::Base
 
     # PUBLIC of the web application
-    ROOT    = Path.backfind('.[.git]')
+    ROOT    = Path.backfind('.[config.ru]')
     PUBLIC  = ROOT/:public
     HTML    = PUBLIC/"_assets/templates/html.whtml"
 
