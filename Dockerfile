@@ -1,21 +1,21 @@
-FROM phusion/passenger-ruby18
+FROM ruby:2.7-alpine
+
+RUN apk add --update git make g++
+
+RUN addgroup -S app && \
+    adduser -S -D -h /home/app app -G app
 
 WORKDIR /home/app
 ENV HOME /home/app
+USER app
 
-RUN apt-get update; \
-    apt-get install --force-yes -y libxml2 libxml2-dev libxslt1-dev libxslt1.1
+COPY --chown=app:app Gemfile*  ${HOME}/
 
-COPY . /home/app
-COPY ./config/webapp.conf /etc/nginx/sites-enabled/webapp.conf
+RUN bundle config set without 'development' && \
+    bundle install --path=vendor/bundle
 
-RUN mkdir -p $HOME/logs && \
-    mkdir -p $HOME/tmp && \
-    bundle install --without development && \
-    chown app.app $HOME -R && \
-    rm /etc/nginx/sites-enabled/default && \
-    rm -f /etc/service/nginx/down && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+COPY --chown=app:app . ${HOME}
 
-CMD ["/sbin/my_init"]
+CMD bundle exec rackup -o 0.0.0.0 -p 3000
+
+EXPOSE 3000

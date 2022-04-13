@@ -21,20 +21,20 @@ module Someoneels
     set :default_context do
       {:pictures => pictures}
     end
-    
+
     def self.pictures
       (PUBLIC/"_assets/pictures").glob("*.jpg").map{|f|
         {:url => "/_assets/pictures/#{f.basename.to_s}"}
       }
     end
-    
+
     ########################################################### Rewriting routes
 
     rewriting = YAML.load((PUBLIC/"rewriting.yml").read)
 
     Array(rewriting["redirect"]).each do |h|
       from, to, status = h.values_at("from", "to", "status")
-      get from do 
+      get from do
         redirect to, status || 301
       end
     end
@@ -44,7 +44,7 @@ module Someoneels
         410
       end
     end
-    
+
     ############################################################## Google routes
 
     get '/sitemap.xml' do
@@ -107,13 +107,13 @@ module Someoneels
           url = url.dir.parent/"index.yml"
         end
         ctx_merge({
-          :lang => lang, 
+          :lang => lang,
           :environment => settings.environment,
         },ctx)
       end
-      
+
       def ctx_merge(left, right)
-        unless left.class == right.class        
+        unless left.class == right.class
           raise "Unexpected #{left.class} vs. #{right.class}"
         end
         case left
@@ -130,7 +130,7 @@ module Someoneels
 
     end
     include Tools
-    
+
     ############################################################## Auto start
 
     # start the server if ruby file executed directly
