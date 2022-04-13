@@ -2,6 +2,6 @@ logs/*
 tmp/*
 .bundle
 vendor/bundle
-websync-admin
 statics
 .DS_Store
+Gemfile.lock

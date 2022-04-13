@@ -12,15 +12,10 @@
     <![endif]-->
     <script src="/_assets/js/jquery-1.6.4.min.js"></script>
     <script src="/_assets/js/jplayer.min.js"></script>
-    <script src="/_assets/js/websync-tools-0.0.1.js"></script>
     <script>
       var pics = [*{pictures as p}{ {url: '${p.url}'} }{,}];
       var curpic = 0;
       var maxpic = !{pictures.size};
-      $(document).ready(function(){
-        websync.tools.external_links_to_blank();
-        setTimeout(function() { nextPict(); }, 3000);
-      });
       function nextPict() {
         $("#band_pict").fadeOut(1000, function() {
           curpic = curpic + 1;
@@ -40,11 +35,11 @@
           <div class="middle">
             <a href="/"><img src="/_assets/css/images/logo.gif" alt="logo"></a>
             <div id="lang-menu">
-              <a href="${url}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> | 
-              <a href="${url}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> | 
+              <a href="${url}?lang=nl" ?{lang == 'nl'}{class="current"}>NL</a> |
+              <a href="${url}?lang=fr" ?{lang == 'fr'}{class="current"}>FR</a> |
               <a href="${url}?lang=en" ?{lang == 'en'}{class="current"}>EN</a>
             </div>
-            <img src="${pictures.first.url}" id="band_pict" 
+            <img src="${pictures.first.url}" id="band_pict"
                  style="opacity: 0.5; " width="240">
           </div>
           <div class="bottom">&nbsp;</div>
@@ -65,11 +60,11 @@
             <<+{${template}.whtml share all}
           </div> <!-- middle -->
           <div class="bottom"></div>
-        </div> 
+        </div>
       </div> <!-- right -->
       <div class="clear"></div>
       <div id="footer">
-        <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp; 
+        <div class="webdesign">webdesign: <a href="http://www.chefbe.net/" target="_blank">chefbe.net</a> &amp;
         fraiche-de-bxl.be</div>
         <div class="copyright">SOMEONEELS.BE - © COPYRIGHT 2007-2017</div>
       </div>
